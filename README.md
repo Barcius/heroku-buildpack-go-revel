@@ -43,20 +43,21 @@ Once the `.godir` and heroku remote are set up, deployment is a single command.
 ```
 $ git push heroku master
 ...
------> Fetching custom git buildpack... done
------> Revel app detected
------> Installing Go 1.1... done
-       Installing Virtualenv... done
-       Installing Mercurial... done
-       Installing Bazaar... done
------> Running: go get -tags heroku ./...
------> Discovering process types
-       Procfile declares types -> (none)
-       Default types for Revel -> web
-
------> Compiled slug size: 33.3MB
------> Launching... done, v5
-       http://pure-sunrise-3607.herokuapp.com deployed to Heroku
+remote: -----> Revel app detected
+remote: -----> Installing go1.8... done
+remote:        Installing Virtualenv... done
+remote:        Installing Mercurial... done
+remote:        Installing Bazaar... done
+remote: -----> Running: go get -tags heroku ./...
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 107.7M
+remote: -----> Launching...
+remote:        Released v4
+remote:        https://enigmatic-headland-71144.herokuapp.com/ deployed to Heroku
 ```
 
 The buildpack will detect your repository as Revel if it
